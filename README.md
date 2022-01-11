@@ -1,4 +1,4 @@
-# UC-Research-Project
+# Spatio-Temporal Correlation on Crime Prediction in NYC
 Urban Computing 2021 Research Project @ Leiden University
 
 The research project is inspired by Xiangyu Zhao and Jiliang Tang. 2017. 
