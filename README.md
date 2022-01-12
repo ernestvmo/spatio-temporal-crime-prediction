@@ -9,7 +9,10 @@ The data collected for this projected have mainly been collected from NYC open d
 The following jupyter notbooks and the data they process will be explained below:
 - "preprocessing311data" processes a csv file from https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9 already filtered to the years 2012 and 2013 to narrow down the dataset (its a very extensive dataaset otherwise). The x-/y-coordinates of the SPCS data have been deleted since the data also contains the longitude/latitude information of the same kind.
 - "preprocessingNYPDcomplaints" processes a csv file from https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i also filtered to only the eximed date. Filtering regarding the date have been applied here.
--"preprocessingSAFdata" processes two csv-files for 2012 and 2013 collected from https://data.cityofnewyork.us/Public-Safety/The-Stop-Question-and-Frisk-Data/ftxv-d5ix. This data only consisted of spatial data in the format of SPCS coordinates, so after filtering on the correct data a conversion from the x,y coordinates to longitude/latitude was made.
--"gettingPOI" is the notebook for fetching points of interest from FourSquare API. It uses the json file "foursquare_venue_categories.json" translating the venue-id to names and interesting information. The closest surrounding venues for each grid will be collected in this file and stored to a new csv.
--"preprocessingTaxiData" - fill it in!
-
+- "preprocessingSAFdata" processes two csv-files for 2012 and 2013 collected from https://data.cityofnewyork.us/Public-Safety/The-Stop-Question-and-Frisk-Data/ftxv-d5ix. This data only consisted of spatial data in the format of SPCS coordinates, so after filtering on the correct data a conversion from the x,y coordinates to longitude/latitude was made.
+- "gettingPOI" is the notebook for fetching points of interest from FourSquare API. It uses the json file "foursquare_venue_categories.json" translating the venue-id to names and interesting information. The closest surrounding venues for each grid will be collected in this file and stored to a new csv.
+- "nypd_complaints_indexing" takes the preprocessed NYPD complaints data and applies modulo indexing to the X/Y coordinates.
+- "311_data_indexing" takes the preprocessed 311 data and applies modulo indexing to the X/Y coordinates.
+- "saf_data_indexing" takes the preprocessed SAF data and applies modulo indexing to the X/Y coordinates.
+- "taxi_data_preprocessing" applies the full preprocessing for the taxi data, which was already filtered to the time range July 2012 to June 2013. Firstly, we remove the columns not required. Then we convert the longitude and latitude to X/Y coordinates. Those coodinates are then converted to modulo indexes. We then group the data by dates and location indexes.
+- ""
