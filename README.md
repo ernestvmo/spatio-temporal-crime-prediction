@@ -15,4 +15,3 @@ The following jupyter notbooks and the data they process will be explained below
 - "311_data_indexing" takes the preprocessed 311 data and applies modulo indexing to the X/Y coordinates.
 - "saf_data_indexing" takes the preprocessed SAF data and applies modulo indexing to the X/Y coordinates.
 - "taxi_data_preprocessing" applies the full preprocessing for the taxi data, which was already filtered to the time range July 2012 to June 2013. Firstly, we remove the columns not required. Then we convert the longitude and latitude to X/Y coordinates. Those coodinates are then converted to modulo indexes. We then group the data by dates and location indexes.
-- ""
